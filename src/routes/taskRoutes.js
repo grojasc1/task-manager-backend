@@ -1,99 +1,123 @@
 /**
  * @swagger
  * components:
- *  schemas:
+ *   schemas:
  *     Task:
- *      type: object
- *     required:
- *     - title
- *    properties:
- *     id:
- *      type: string
- *      description: The auto-generated id of the task
- *     title:
- *      type: string
- *      description: The title of the task
- *    description:
- *      type: string
- *      description: The description of the task
- *    completed:
- *      type: boolean
- *      description: The completion status of the task
- *    createdAt:
- *      type: string
- *      format: date-time
- *      description: The creation date of the task
- *    example:
- *      id: 60f5b1a1d4b3f20015f7b6b4
- *      title: Buy groceries
- *      description: Buy milk, bread, and eggs
- *      completed: false
- *      createdAt: 2021-07-20T20:00:00.000Z
+ *       type: object
+ *       required:
+ *         - title
+ *       properties:
+ *         id:
+ *           type: string
+ *           description: ID único de la tarea
+ *         title:
+ *           type: string
+ *           description: El título de la tarea
+ *         description:
+ *           type: string
+ *           description: Una descripción opcional de la tarea
+ *         completed:
+ *           type: boolean
+ *           description: Estado de la tarea
+ *         createdAt:
+ *           type: string
+ *           format: date-time
+ *           description: Fecha de creación de la tarea
+ *       example:
+ *         id: "63a5b3e2fdf78a001c123456"
+ *         title: "Comprar leche"
+ *         description: "Recordar comprar leche en la tienda"
+ *         completed: false
+ *         createdAt: "2024-12-28T15:00:00.000Z"
  */
 
 /**
  * @swagger
  * /api/tasks:
- *  get:
- *   summary: Get all tasks
- *   tags: [Tasks]
- *   responses:
- *   200:
- *      description: The list of tasks
- *      content:
- *          application/json:
+ *   get:
+ *     summary: Obtiene todas las tareas
+ *     tags: [Tasks]
+ *     responses:
+ *       200:
+ *         description: Lista de tareas
+ *         content:
+ *           application/json:
  *             schema:
- *                type: array
- *                items:
+ *               type: array
+ *               items:
  *                 $ref: '#/components/schemas/Task'
- */
-
-/**
- * @swagger
- * /api/tasks:
- * post:
- * summary: Create a new task
- * tags: [Tasks]
- * requestBody:
- * required: true
- * content:
- * application/json:
- * schema:
- * $ref: '#/components/schemas/Task'
- * responses:
- * 201:
- * description: The task was successfully created
- * content:
- * application/json:
- * schema:
- * $ref: '#/components/schemas/Task'
- * 400:
- * description: Invalid task
+ *   post:
+ *     summary: Crea una nueva tarea
+ *     tags: [Tasks]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Task'
+ *     responses:
+ *       201:
+ *         description: Tarea creada exitosamente
+ *       400:
+ *         description: Error de validación
  */
 
 /**
  * @swagger
  * /api/tasks/{id}:
- * get:
- * summary: Get a task by ID
- * tags: [Tasks]
- * parameters:
- * - in: path
- * name: id
- * schema:
- * type: string
- * required: true
- * description: The task ID
- * responses:
- * 200:
- * description: The task description by ID
- * content:
- * application/json:
- * schema:
- * $ref: '#/components/schemas/Task'
- * 404:
- * description: The task was not found
+ *   get:
+ *     summary: Obtiene una tarea por su ID
+ *     tags: [Tasks]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: ID de la tarea
+ *     responses:
+ *       200:
+ *         description: Detalles de la tarea
+ *       404:
+ *         description: Tarea no encontrada
+ *   put:
+ *     summary: Actualiza una tarea por su ID
+ *     tags: [Tasks]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: ID de la tarea
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Task'
+ *     responses:
+ *       200:
+ *         description: Tarea actualizada
+ *       404:
+ *         description: Tarea no encontrada
+ *   delete:
+ *     summary: Elimina una tarea por su ID
+ *     tags: [Tasks]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: ID de la tarea
+ *     responses:
+ *       200:
+ *         description: Tarea eliminada
+ *       404:
+ *         description: Tarea no encontrada
  */
+
 
 const express = require('express');
 const { body, param } = require('express-validator');
