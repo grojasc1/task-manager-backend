@@ -21,12 +21,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/tasks",
-					"protocol": "http",
+					"raw": "https://task-manager-backend-production-5cb8.up.railway.app/api/tasks",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"task-manager-backend-production-5cb8",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"tasks"
@@ -41,12 +43,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/tasks",
-					"protocol": "http",
+					"raw": "https://task-manager-backend-production-5cb8.up.railway.app/api/tasks",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"task-manager-backend-production-5cb8",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"tasks"
@@ -61,16 +65,18 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/tasks/67706407599eab782b795aa1",
-					"protocol": "http",
+					"raw": "https://task-manager-backend-production-5cb8.up.railway.app/api/tasks/677084eb2be1b4f7e27fc462",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"task-manager-backend-production-5cb8",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"tasks",
-						"67706407599eab782b795aa1"
+						"677084eb2be1b4f7e27fc462"
 					]
 				}
 			},
@@ -91,16 +97,18 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/tasks/67706407599eab782b795aa1",
-					"protocol": "http",
+					"raw": "https://task-manager-backend-production-5cb8.up.railway.app/api/tasks/677084eb2be1b4f7e27fc462",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"task-manager-backend-production-5cb8",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"tasks",
-						"67706407599eab782b795aa1"
+						"677084eb2be1b4f7e27fc462"
 					]
 				}
 			},
@@ -112,16 +120,18 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/tasks/67706407599eab782b795aa1",
-					"protocol": "http",
+					"raw": "https://task-manager-backend-production-5cb8.up.railway.app/api/tasks/677084eb2be1b4f7e27fc462",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"task-manager-backend-production-5cb8",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"tasks",
-						"67706407599eab782b795aa1"
+						"677084eb2be1b4f7e27fc462"
 					]
 				}
 			},
