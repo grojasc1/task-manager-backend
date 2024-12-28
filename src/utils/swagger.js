@@ -2,21 +2,15 @@ const swaggerJSDoc = require('swagger-jsdoc');
 
 const swaggerOptions = {
     definition: {
-        openapi: '3.0.0',
         info: {
-            title: 'Task API',
+            title: 'Task Manager API',
             version: '1.0.0',
-            description: 'A simple Express API for managing tasks',
+            description: 'API for managing tasks',
         },
-        servers: [
-            {
-                url: 'http://localhost:5000',
-            },
-        ],
     },
     apis: ['./src/routes/*.js'],
 };
 
-const swaggerSpec = swaggerJSDoc(swaggerOptions);
+const swaggerDocs = swaggerJSDoc(swaggerOptions);
 
-module.exports = swaggerSpec;
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
