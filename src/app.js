@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const taskRoutes = require('./routes/taskRoutes');
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./utils/swagger');
-
+const cors = require('cors');
 
 dotenv.config();
 
@@ -15,6 +15,8 @@ app.use(express.json());
 app.use('/api/tasks', taskRoutes);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+app.use(cors());
 
 console.log('Documentations: http://localhost:5000/api-docs');
 
