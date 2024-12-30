@@ -91,9 +91,10 @@ Antes de comenzar, asegúrate de tener instalados los siguientes componentes:
 |   |-- app.js
 |-- tests/
 |   |-- taskRoutes.test.js
-|-- .env.example
+|-- .env
 |-- README.md
 |-- package.json
+|-- package-lock.json
 ```
 
 ---
