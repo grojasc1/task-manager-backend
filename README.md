@@ -127,7 +127,6 @@ Asegúrate de configurar las siguientes variables de entorno en tu archivo `.env
 | `PORT`     | Puerto donde se ejecutará el servidor                    |
 | `MONGO_URI`| URI de conexión a la base de datos MongoDB               |
 
-Puedes encontrar un archivo de ejemplo en el proyecto (`.env.example`).
 
 ---
 
