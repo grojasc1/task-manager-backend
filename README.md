@@ -30,7 +30,7 @@ Antes de comenzar, asegúrate de tener instalados los siguientes componentes:
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/grojasc1/task-manager-backend.git
    cd task-manager-backend
    ```
 
